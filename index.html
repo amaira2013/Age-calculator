@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+<style>
+
+body{
+    text-align: center;
+    background-color: mistyrose;
+    color: aqua;
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+<h3 id="age"> Age Calculator </h3>
+
+<br>
+
+<input type="date" id="dob">
+
+<button onclick="calculateAge()" id="blue"> Calculate Age </button>
+
+<p id="red"> </p>
+
+<script> 
+
+function calculateAge(){
+var currentDate= new Date();
+
+var d2 = document.getElementById("dob").value;
+
+var dob = new Date(d2);
+
+var diff = currentDate.getTime()-dob.getTime();
+
+var age = Math.floor(diff/(1000*60*60*24*365.25));
+
+document.getElementById("red").innerHTML = "Your Age is "+ age +"years";
+}
+
+
+</script>
+
+</body>
+</html>
